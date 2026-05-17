@@ -1,0 +1,106 @@
+.honors {
+  background: var(--bg-elev);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.honors__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.honors__col-title {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--accent-soft);
+  color: var(--ink);
+}
+
+.honors__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.honors__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.honors__year {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.honors__title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.leadership__role {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.leadership__org {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+}
+
+.leadership__period {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.leadership__desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.skills__group {
+  margin-bottom: 1.5rem;
+}
+
+.skills__group:last-child {
+  margin-bottom: 0;
+}
+
+.skills__label {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.skills__items {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .honors__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

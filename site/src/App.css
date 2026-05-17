@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  display: block;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
