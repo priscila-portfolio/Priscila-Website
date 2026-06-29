@@ -11,24 +11,53 @@ export default function Honors() {
           <span className="rule"></span>
         </div>
 
-        <div className="honors__grid">
-          <div className="honors__col">
-            <h3 className="honors__col-title">Honors</h3>
-            <ul className="honors__list">
-              {honors.map((h) => (
-                <li key={h.title}>
-                  <span className="honors__year">{h.year}</span>
-                  <span className="honors__title">{h.title}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <h3 className="honors__section-title">Honors</h3>
+        <ol className="timeline" aria-label="Honors timeline">
+          {honors.map((h, i) => (
+            <li
+              key={h.title}
+              className={`timeline__item timeline__item--${
+                i % 2 === 0 ? "left" : "right"
+              }`}
+            >
+              <span className="timeline__node" aria-hidden="true"></span>
+              <article className="timeline__card">
+                <span className="timeline__year">{h.year}</span>
+                <p className="timeline__title">{h.title}</p>
+                {h.link && (
+                  <a
+                    className="timeline__link"
+                    href={h.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {h.linkLabel || "View source"} &rarr;
+                  </a>
+                )}
+              </article>
+            </li>
+          ))}
+        </ol>
 
+        <div className="honors__lower">
           <div className="honors__col">
             <h3 className="honors__col-title">Leadership</h3>
             <div className="leadership">
               <p className="leadership__role">{leadership.role}</p>
-              <p className="leadership__org">{leadership.org}</p>
+              <p className="leadership__org">
+                {leadership.orgLink ? (
+                  <a
+                    className="leadership__org-link"
+                    href={leadership.orgLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {leadership.org}
+                  </a>
+                ) : (
+                  leadership.org
+                )}
+              </p>
               <p className="leadership__period">{leadership.period}</p>
               <p className="leadership__desc">{leadership.description}</p>
             </div>

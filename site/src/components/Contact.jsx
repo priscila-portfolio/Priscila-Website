@@ -8,13 +8,13 @@ export default function Contact() {
         <div className="contact__inner">
           <p className="eyebrow">Get in touch</p>
           <h2 className="contact__title">
-            Let's build something <em>thoughtful</em>.
+            Let's <em>talk</em>.
           </h2>
           <span className="rule" style={{ margin: "1.5rem auto" }}></span>
           <p className="contact__lede">
-            I'm currently open to full time roles in software engineering, data
-            science, and applied AI. If you have a project, a team, or just a
-            question, I'd love to hear from you.
+            I'm open to full-time roles in software engineering, data science,
+            and applied AI. If you have a project, a team, or just a question,
+            feel free to reach out.
           </p>
 
           <a href={`mailto:${profile.email}`} className="contact__email">

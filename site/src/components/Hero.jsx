@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="hero__meta">
             <span>{profile.location}</span>
             <span className="dot">&bull;</span>
-            <span>Open to full time roles</span>
+            <span>Open to full-time roles</span>
           </div>
           <div className="hero__cta">
             <a href="#contact" className="btn btn--solid">

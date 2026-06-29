@@ -32,22 +32,47 @@ export default function Experience() {
                   <span className="exp-card__loc">{item.location}</span>
                 </div>
                 <h3 className="exp-card__role">{item.role}</h3>
-                <p className="exp-card__company">{item.company}</p>
+                <p className="exp-card__company">
+                  {item.companyLink ? (
+                    <a
+                      className="exp-card__company-link"
+                      href={item.companyLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item.company}
+                    </a>
+                  ) : (
+                    item.company
+                  )}
+                </p>
                 <ul className="exp-card__bullets">
                   {item.bullets.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}
                 </ul>
-                {item.poster && (
-                  <a
-                    className="exp-card__poster"
-                    href={item.poster}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Research Poster →
-                  </a>
-                )}
+                <div className="exp-card__links">
+                  {item.poster && (
+                    <a
+                      className="exp-card__poster"
+                      href={item.poster}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Research Poster →
+                    </a>
+                  )}
+                  {item.profile && (
+                    <a
+                      className="exp-card__poster"
+                      href={item.profile}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View MSRP Profile →
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}

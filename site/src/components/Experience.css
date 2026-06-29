@@ -15,6 +15,30 @@
   grid-template-columns: 0.85fr 1.15fr;
   gap: 3rem;
   align-items: center;
+  padding: 2.5rem;
+  border-radius: 12px;
+  background: var(--exp-card-bg, #fbf0ec);
+  transition: background 0.4s ease;
+}
+
+.exp-card:nth-child(5n + 1) {
+  --exp-card-bg: #fbf0ec; /* blush */
+}
+
+.exp-card:nth-child(5n + 2) {
+  --exp-card-bg: #faf3e7; /* cream */
+}
+
+.exp-card:nth-child(5n + 3) {
+  --exp-card-bg: #f3eef2; /* mauve */
+}
+
+.exp-card:nth-child(5n + 4) {
+  --exp-card-bg: #f6e7dc; /* peach */
+}
+
+.exp-card:nth-child(5n + 5) {
+  --exp-card-bg: #eef2ec; /* sage */
 }
 
 .exp-card:nth-child(even) {
@@ -124,9 +148,27 @@
   background: var(--accent);
 }
 
+.exp-card__company-link {
+  color: inherit;
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.exp-card__company-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.exp-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
 .exp-card__poster {
   display: inline-block;
-  margin-top: 1.25rem;
   font-family: var(--sans);
   font-size: 0.78rem;
   letter-spacing: 0.18em;
@@ -148,6 +190,7 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     direction: ltr;
+    padding: 1.75rem;
   }
   .exp-card__role {
     font-size: 1.5rem;

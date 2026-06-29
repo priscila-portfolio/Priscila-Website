@@ -7,9 +7,7 @@ export default function About() {
       <div className="about__inner container">
         <div className="about__head">
           <p className="eyebrow">About</p>
-          <h2 className="about__title">
-            A computer scientist with a builder's mindset.
-          </h2>
+          <h2 className="about__title">How I got here.</h2>
           <span className="rule"></span>
         </div>
 

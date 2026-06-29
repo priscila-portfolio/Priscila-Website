@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import "./Nav.css";
 
 const links = [
+  { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
   { href: "#honors", label: "Honors" },
+  { href: "#certifications", label: "Certifications" },
+  { href: "#gallery", label: "Gallery" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -22,7 +24,7 @@ export default function Nav() {
   return (
     <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <div className="nav__inner container">
-        <a href="#top" className="nav__brand">
+        <a href="#home" className="nav__brand">
           <span className="nav__brand-name">Priscila Madrid</span>
           <span className="nav__brand-tag">Computer Science</span>
         </a>
