@@ -35,6 +35,11 @@ export default function Honors() {
                   </a>
                 )}
               </article>
+              {h.preview && (
+                <figure className="timeline__preview" aria-hidden="true">
+                  <img src={h.preview} alt="" loading="lazy" />
+                </figure>
+              )}
             </li>
           ))}
         </ol>

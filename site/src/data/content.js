@@ -5,15 +5,9 @@ import eaton from "../assets/images/eaton.jpg";
 import ghc from "../assets/images/ghc.jpg";
 import keck from "../assets/images/keck.jpg";
 import maesConference from "../assets/images/maes-conference.jpg";
-import maesConference2 from "../assets/images/maes-conference2.jpg";
 import maes from "../assets/images/maes.jpg";
 import mit from "../assets/images/mit.jpg";
-import mit2 from "../assets/images/mit2.jpg";
-import shpeGroup from "../assets/images/shpe-group.jpg";
-import shpe from "../assets/images/shpe.jpg";
 import topTen from "../assets/images/top-ten.jpg";
-import topTen2 from "../assets/images/top-ten2.jpg";
-import topTen3 from "../assets/images/top-ten3.jpg";
 import topTen4 from "../assets/images/top-ten4.jpg";
 
 export const images = {
@@ -24,15 +18,9 @@ export const images = {
   ghc,
   keck,
   maesConference,
-  maesConference2,
   maes,
   mit,
-  mit2,
-  shpeGroup,
-  shpe,
   topTen,
-  topTen2,
-  topTen3,
   topTen4,
 };
 
@@ -133,11 +121,28 @@ export const honors = [
     year: "2025",
     link: "https://www.utep.edu/newsfeed/2025/march/utep-announces-2025-top-ten-seniors.html",
     linkLabel: "Read announcement",
+    preview: topTen,
   },
-  { title: "NCWIT Collegiate Award Finalist", year: "2025" },
-  { title: "SHPE STEM Poster Winner", year: "2024" },
-  { title: "Great Minds in STEM Scholar", year: "2023 & 2024" },
-  { title: "Grace Hopper Scholar", year: "2023" },
+  {
+    title: "NCWIT Collegiate Award Finalist",
+    year: "2025",
+    preview: topTen4,
+  },
+  {
+    title: "SHPE STEM Poster Winner",
+    year: "2024",
+    preview: maesConference,
+  },
+  {
+    title: "Great Minds in STEM Scholar",
+    year: "2023 & 2024",
+    preview: maes,
+  },
+  {
+    title: "Grace Hopper Scholar",
+    year: "2023",
+    preview: ghc,
+  },
 ];
 
 export const certifications = {
@@ -189,17 +194,6 @@ export const leadership = {
   description:
     "Maintained the chapter website at utepshpemaes.org, co-planned 6 general meetings and 15 workshops per semester for 320+ members, and led bilingual logistics for SHPE National Bootcamp, the National Convention, and professional networking sessions with industry partners.",
 };
-
-export const gallery = [
-  { src: topTen, caption: "UTEP Top Ten Senior, 2025" },
-  { src: mit2, caption: "MIT Summer Research, 2024" },
-  { src: ghc, caption: "Grace Hopper Celebration" },
-  { src: maesConference, caption: "SHPE-MAES National Conference" },
-  { src: shpeGroup, caption: "SHPE Chapter, UTEP" },
-  { src: topTen3, caption: "Top Ten Senior Ceremony" },
-  { src: maes, caption: "SHPE-MAES Recognition" },
-  { src: topTen4, caption: "UTEP Recognition" },
-];
 
 export const skills = {
   Languages: ["Python", "JavaScript", "TypeScript", "Java", "C++", "SQL"],

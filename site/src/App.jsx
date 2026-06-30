@@ -5,7 +5,6 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Honors from "./components/Honors";
 import Certifications from "./components/Certifications";
-import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -16,7 +15,6 @@ const pages = [
   { id: "experience", label: "Experience", Component: Experience },
   { id: "honors", label: "Honors", Component: Honors },
   { id: "certifications", label: "Certifications", Component: Certifications },
-  { id: "gallery", label: "Gallery", Component: Gallery },
   { id: "contact", label: "Contact", Component: Contact },
 ];
 

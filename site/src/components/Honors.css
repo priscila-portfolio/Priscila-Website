@@ -127,6 +127,59 @@
   transform: translateY(-2px);
 }
 
+/* Polaroid-style hover preview, appears on the opposite side of the spine */
+.timeline__preview {
+  position: absolute;
+  top: 50%;
+  width: 220px;
+  height: 155px;
+  margin: 0;
+  padding: 8px 8px 14px;
+  background: #fffaf5;
+  border-radius: 4px;
+  box-shadow: 0 14px 30px rgba(95, 60, 50, 0.18),
+    0 2px 6px rgba(95, 60, 50, 0.08);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.timeline__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Left card → preview floats to the right of the spine */
+.timeline__item--left .timeline__preview {
+  left: 50%;
+  margin-left: 3.25rem;
+  transform: translateY(-50%) translateX(-12px) rotate(2.5deg);
+}
+
+/* Right card → preview floats to the left of the spine */
+.timeline__item--right .timeline__preview {
+  right: 50%;
+  margin-right: 3.25rem;
+  transform: translateY(-50%) translateX(12px) rotate(-2.5deg);
+}
+
+.timeline__item:hover .timeline__preview {
+  opacity: 1;
+}
+
+.timeline__item--left:hover .timeline__preview {
+  transform: translateY(-50%) translateX(0) rotate(2.5deg);
+}
+
+.timeline__item--right:hover .timeline__preview {
+  transform: translateY(-50%) translateX(0) rotate(-2.5deg);
+}
+
 .timeline__year {
   display: block;
   font-family: var(--serif);
@@ -248,6 +301,10 @@
 /* === Mobile === */
 
 @media (max-width: 720px) {
+  .timeline__preview {
+    display: none;
+  }
+
   .timeline {
     margin-bottom: 3.5rem;
   }
