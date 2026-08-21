@@ -26,6 +26,10 @@ export default function Contact() {
               LinkedIn
             </a>
             <span className="dot">/</span>
+            <a href={profile.github} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <span className="dot">/</span>
             <a href={profile.resume} target="_blank" rel="noreferrer">
               Resume
             </a>
